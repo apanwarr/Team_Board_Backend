@@ -1,41 +1,48 @@
+import mongoose from 'mongoose';
 import Board from '../models/Board.js';
 import Task from '../models/Task.js';
 
 export const getBoards = async (req, res) => {
-  try {
-    const boards = await Board.find();
-    res.json(boards);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to get boards' });
-  }
+  const boards = await Board.find().sort({ createdAt: -1 });
+  res.json(boards);
 };
 
 export const createBoard = async (req, res) => {
-  try {
-    const board = new Board({ name: req.body.name });
-    await board.save();
-    res.status(201).json(board);
-  } catch (err) {
-    res.status(400).json({ error: 'Failed to create board' });
-  }
+  const { name } = req.body;
+  const board = new Board({ name });
+  await board.save();
+  res.status(201).json(board);
 };
 
 export const getTasksInBoard = async (req, res) => {
-  try {
-    const tasks = await Task.find({ boardId: req.params.id });
-    res.json(tasks);
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch tasks for board' });
-  }
+  const tasks = await Task.find({ boardId: req.params.id });
+  res.json(tasks);
 };
 
 export const createTaskInBoard = async (req, res) => {
-  try {
-    const task = new Task({ ...req.body, boardId: req.params.id });
-    await task.save();
-    res.status(201).json(task);
-  } catch (err) {
-    res.status(400).json({ error: 'Failed to create task' });
-  }
+  const task = new Task({ ...req.body, boardId: req.params.id });
+  await task.save();
+  res.status(201).json(task);
 };
 
+export const deleteBoard = async (req, res) => {
+  const boardId = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(boardId)) {
+    return res.status(400).json({ error: 'Invalid board ID format' });
+  }
+
+  try {
+    const deletedBoard = await Board.findByIdAndDelete(boardId);
+
+    if (!deletedBoard) {
+      return res.status(404).json({ error: 'Board not found' });
+    }
+
+    await Task.deleteMany({ boardId }); // Also delete related tasks
+
+    res.status(200).json({ message: 'Board deleted' });
+  } catch (error) {
+    res.status(500).json({ error: 'Server error while deleting board' });
+  }
+};
