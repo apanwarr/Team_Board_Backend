@@ -89,6 +89,18 @@ Manually allow <code>0.0.0.0/0</code> under Network Access to connect from Rende
 <a href="https://team-board-backend.onrender.com" target="_blank">https://team-board-backend.onrender.com</a>
 </p>
 
+<h2>ScreenShots</h2>
+
+![1](https://github.com/user-attachments/assets/c092fbea-1616-4fe4-b2d4-9a1c1d70d9fd)
+![2](https://github.com/user-attachments/assets/692294e0-ae0d-4180-8697-522a6f627aa0)
+![3](https://github.com/user-attachments/assets/12d65bc2-b419-4acf-bdc1-d2c0caf4b8cb)
+![4](https://github.com/user-attachments/assets/ee426c1a-bc2a-43d3-a499-9fcf73678c91)
+![5](https://github.com/user-attachments/assets/b8a9eccf-d470-4437-96fd-f8b6b444e267)
+![6](https://github.com/user-attachments/assets/ba6bfb40-0d5b-43c8-a3d8-e6c02b2c8217)
+![7](https://github.com/user-attachments/assets/6c598717-a8ed-41fd-b70f-4a50d901481a)
+![8](https://github.com/user-attachments/assets/23d9dc6d-d1ea-4817-b420-c2f784990be2)
+![9](https://github.com/user-attachments/assets/8840db35-e3fe-4f15-8cde-bb04539bbe7f)
+
 <hr>
 
 <h2>🌟 Bonus Features (Coming Soon)</h2>
