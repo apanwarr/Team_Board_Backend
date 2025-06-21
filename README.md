@@ -2,8 +2,7 @@
 
 <h2>📁 This is the <strong>Team_Board_Backend</strong> repository</h2>
 
-🔗 <strong>Live API Base URL:</strong>  
-<a href="https://team-board-backend.onrender.com" target="_blank">https://team-board-backend.onrender.com</a>  
+🔗 <strong>Live API Base URL:</strong>  <a href="https://team-board-backend.onrender.com" target="_blank">https://team-board-backend.onrender.com</a>  
 
 <hr>
 
