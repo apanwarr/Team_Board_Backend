@@ -4,9 +4,6 @@
 
 🔗 <strong>Live API Base URL:</strong>  
 <a href="https://team-board-backend.onrender.com" target="_blank">https://team-board-backend.onrender.com</a>  
-🔙 For the frontend code, check the <strong>Team_Board_Frontend</strong> repository:  
-<a href="https://github.com/your-username/team-board-frontend" target="_blank">https://github.com/your-username/team-board-frontend</a>  
-<em>(Replace with your actual GitHub frontend repo URL)</em>
 
 <hr>
 
